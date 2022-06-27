@@ -33,6 +33,3 @@ var romanToInt = function (s) {
     return sum;
 };
 
-
-
-console.log(romanToInt('MCMXCIV'));

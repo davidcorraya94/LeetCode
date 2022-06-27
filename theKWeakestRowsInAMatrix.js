@@ -22,18 +22,3 @@ var kWeakestRows = function (mat, k) {
     return finalList;
 }
 
-
-kWeakestRows(
-    [[1, 1, 0, 0, 0],
-    [1, 1, 1, 1, 1],
-    [1, 0, 0, 0, 0],
-    [1, 0, 0, 0, 0],
-    [1, 1, 1, 1, 1]], 3)
-
-
-
-const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function (a, b) {
-    return a - b;
-});
-console.log(numbers);

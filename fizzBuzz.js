@@ -21,5 +21,3 @@ var fizzBuzz = function (n) {
     return answer;
 };
 
-
-console.log(fizzBuzz(15));
