@@ -1,23 +1,28 @@
 var lengthOfLongestSubstring = function (s) {
+    let str = '';
+    let final = '';
     let length = 0;
-    let checkStr = '';
     let i = 0;
-
-    for (i; i < s.length; i++) {
-        if (checkStr.includes(s[i])) {
-            if (checkStr.length > length) length = checkStr.length;
-            checkStr = s[i];
+    let j = 0;
+    while (j < s.length) {
+        if (str.includes(s[j])) {
+            i++;
+            j = i;
+            str = '';
         }
         else {
-            checkStr = checkStr.concat(s[i]);
+            str = str.concat(s[j]);
+            if (str.length >= final.length) {
+                final = str;
+                length = final.length;
+            }
+            j++;
         }
-
     }
-
-    if (i == s.length) return length + 1;
-    else return length;
-
+    return length;
 };
 
 
-console.log(lengthOfLongestSubstring('abcabcbb'))
+
+
+
